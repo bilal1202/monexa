@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+
+@theme{
+    /* custom Break points */
+    --breakpoint-*:initial;
+    --breakpoint-xs:575px;
+    --breakpoint-sm:768px;
+    --breakpoint-md:992px;
+    --breakpoint-lg:1200px;
+    --breakpoint-xl:1400px;
+    /* Typography */
+    --font-outfit:Outfit,sans-serif;
+    --font-poppins:Poppins,sans-serif;
+}
+
+@layer base{
+    html{
+        @apply scroll-smooth
+    }
+    body{
+        @apply font-poppins
+    }
+}
+
+@layer utilities{
+    .container{
+        @apply w-full px-4 xs:max-w-[540px] sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1140px] xl:max-w-[1320px] mx-auto
+    }
+    p{
+        @apply md:text-lg leading-normal text-black
+    }
+    .section{
+        @apply pt-[100px] md:pt-[100px]
+    }
+    h1,h2,h3,h4{
+        @apply font-outfit leading-tight font-bold text-balance
+    }
+    .subtitle{
+        @apply text-purple-600
+    }
+    h2{
+        @apply text-3xl md:text-4xl
+    }
+}
+
+@layer components{
+    button{
+        @apply cursor-pointer
+    }
+    .primary-btn{
+        @apply bg-purple-400 text-white px-8 py-4 rounded-[40px] text-center hover:bg-purple-700 transition-all hover:-translate-0.5
+    }
+    .secondary-btn{
+        @apply bg-white  px-8 py-4 rounded-[50px] text-purple-500 hover:-translate-0.5 shadow-sm hover:shadow-md transition-all
+    }
+}
+
+/* Header */
+
+.navbar{
+    @apply md:hidden absolute top-[140%] right-6 bg-white border min-w-[200px] border-gray-300 px-6 py-7 rounded-lg grid gap-7 shadow-xl scale-50 origin-top-right opacity-0 pointer-events-none transition-all
+}
+.navbar.active{
+    @apply opacity-100 scale-100 pointer-events-auto
+}
