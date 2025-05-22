@@ -1,66 +1,79 @@
 @import "tailwindcss";
 
 
-@theme{
+@theme {
     /* custom Break points */
-    --breakpoint-*:initial;
-    --breakpoint-xs:575px;
-    --breakpoint-sm:768px;
-    --breakpoint-md:992px;
-    --breakpoint-lg:1200px;
-    --breakpoint-xl:1400px;
+    --breakpoint-*: initial;
+    --breakpoint-xs: 575px;
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 992px;
+    --breakpoint-lg: 1200px;
+    --breakpoint-xl: 1400px;
     /* Typography */
-    --font-outfit:Outfit,sans-serif;
-    --font-poppins:Poppins,sans-serif;
+    --font-outfit: Outfit, sans-serif;
+    --font-poppins: Poppins, sans-serif;
 }
 
-@layer base{
-    html{
+@layer base {
+    html {
         @apply scroll-smooth
     }
-    body{
+
+    body {
         @apply font-poppins
     }
 }
 
-@layer utilities{
-    .container{
+@layer utilities {
+    .container {
         @apply w-full px-4 xs:max-w-[540px] sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1140px] xl:max-w-[1320px] mx-auto
     }
-    p{
+
+    p {
         @apply md:text-lg leading-normal text-black
     }
-    .section{
+
+    .section {
         @apply pt-[100px] md:pt-[100px]
     }
-    h1,h2,h3,h4{
+
+    h1, h2, h3, h4 {
         @apply font-outfit leading-tight font-bold text-balance
     }
-    .subtitle{
+
+    .subtitle {
         @apply text-purple-600
     }
-    h2{
+
+    h2 {
         @apply text-3xl md:text-4xl
     }
 }
 
-@layer components{
-    button{
+@layer components {
+    button {
         @apply cursor-pointer
     }
-    .primary-btn{
-        @apply bg-purple-400 text-white px-8 py-4 rounded-[40px] text-center hover:bg-purple-700 transition-all hover:-translate-0.5
+
+    .primary-btn {
+        @apply inline-flex items-center bg-purple-400 text-white px-6 py-3 rounded-[40px] text-center hover:bg-purple-700 transition-all hover:-translate-0.5;
     }
-    .secondary-btn{
-        @apply bg-white  px-8 py-4 rounded-[50px] text-purple-500 hover:-translate-0.5 shadow-sm hover:shadow-md transition-all
+
+    .secondary-btn {
+        @apply inline-flex items-center bg-white px-6 py-3 rounded-[50px] text-purple-500 hover:-translate-0.5 shadow-sm hover:shadow-md transition-all;
     }
+
 }
 
 /* Header */
 
-.navbar{
+.navbar {
     @apply md:hidden absolute top-[140%] right-6 bg-white border min-w-[200px] border-gray-300 px-6 py-7 rounded-lg grid gap-7 shadow-xl scale-50 origin-top-right opacity-0 pointer-events-none transition-all
 }
-.navbar.active{
+
+.navbar.active {
     @apply opacity-100 scale-100 pointer-events-auto
+}
+.my-purple-numbers li::marker {
+  color: theme('colors.purple.600'); /* This pulls the exact Tailwind purple-600 color */
 }

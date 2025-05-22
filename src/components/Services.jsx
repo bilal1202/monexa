@@ -2,10 +2,10 @@ import React from 'react'
 import { servicesCardItems } from '../data/data'
 const Services = () => {
     return (
-        <section className="section bg-purple-50 pb-[120px] md:pb-[150px]" id="services">
+        <section className="section bg-purple-50 pb-[120px] md:pb-[180px]" id="services">
             <div className="container">
-                <p className="subtitle">Our services</p>
-                <h2>What We Offer</h2>
+                <p className="subtitle text-center">Our services</p>
+                <h2 className='text-center'>What We Offer</h2>
 
                 {/* Card Wrapper */}
                 <div className="grid gap-8 mt-10 md:mt-16 sm:grid-cols-2 md:grid-cols-4">

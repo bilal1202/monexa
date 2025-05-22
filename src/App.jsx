@@ -6,6 +6,9 @@ import About from './components/About'
 import Stats from './components/Stats'
 import EasyToUse from './components/EasyToUse'
 import Services from './components/Services'
+import HowItWorks from './components/HowItWorks'
+import DownloadApp from './components/DownloadApp'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -13,11 +16,14 @@ const App = () => {
       <Header />
       <main>
         <Hero />
-        <About/>
-        <Stats/>
-        <EasyToUse/>
-        <Services/>
+        <About />
+        <Stats />
+        <EasyToUse />
+        <Services />
+        <HowItWorks />
+        <DownloadApp/>
       </main>
+      <Footer/>
     </>
   )
 }
